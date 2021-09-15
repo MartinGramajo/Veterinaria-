@@ -1,13 +1,16 @@
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Fragment } from 'react';
 import Title from './components/Title';
+import FormularioCitas from './components/FormularioPacientes';
 
 function App() {
   return (
-    <div >
-    <Title />
-    </div>
+    <Fragment>
+      <Title />
+      <FormularioCitas />
+    </Fragment>
   );
 }
 

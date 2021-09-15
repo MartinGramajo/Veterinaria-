@@ -9,11 +9,13 @@ function App() {
 
   // Arreglo de citas 
   const [citas, setCitas] = useState([]);
+  console.log("file: App.js ~ line 12 ~ App ~ citas", citas)
 
   // Funcion que tome las citas actuales y agregue la nueva 
 
   const crearCita = cita => {
-    console.log(cita)
+    setCitas([...citas,cita
+    ])
   }
 
   return (

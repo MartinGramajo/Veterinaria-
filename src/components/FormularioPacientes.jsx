@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { Form, Row, Button, Col } from "react-bootstrap";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
-export default function FormExample() {
+export default function FormularioPacientes({ crearCita }) {
   // state de validacion
   const [validated, setValidated] = useState(false);
 
   // state de citas
   const [cita, setCita] = useState({
-    mascota: "",
-    propietario: "",
-    fecha: "",
-    hora: "",
-    sintomas: "",
+    mascota: '',
+    propietario: '',
+    fecha: '',
+    hora: '',
+    sintomas: '',
   });
-  console.log(cita)
+
   // Funcion que se ejecuta cada que el usuario escribe en un  input
   const handleChange = (e) => {
     setCita({
@@ -36,17 +36,24 @@ export default function FormExample() {
 
       //eliminar el msj de validacion
       setValidated(false);
-      
+
       //asignar un ID
       cita.id = uuidv4();
 
-      // crear una cita 
+      // crear una cita
+      crearCita(cita);
       
       //Reiniciar el form
+      setCita({
+        mascota: '',
+        propietario: '',
+        fecha: '',
+        hora: '',
+        sintomas: '',
+      });
     } else {
-      setValidated(true)
+      setValidated(true);
     }
-
   };
 
   return (

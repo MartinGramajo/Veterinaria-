@@ -1,17 +1,30 @@
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import Title from './components/Title';
 import FormularioCitas from './components/FormularioPacientes';
-import Title2 from './components/Title2';
 import Cita from './components/Cita';
 
 function App() {
 
+  // Citas en local Storage
+  let citasIniciales = JSON.parse(localStorage.getItem('citas'));
+  if (!citasIniciales) {
+    citasIniciales = []; 
+  }
+
   // Arreglo de citas 
-  const [citas, setCitas] = useState([]);
-  console.log("file: App.js ~ line 12 ~ App ~ citas", citas)
+  const [citas, setCitas] = useState(citasIniciales);
+  
+  // use Effect para realizar ciertas operaciones cuando el esta cambia 
+  useEffect(() => {
+    if (citasIniciales) {
+      localStorage.setItem('citas', JSON.stringify(citas))
+    } else {
+      localStorage.setItem('citas', JSON.stringify([]));
+    }
+  }, [citas])
 
   // Funcion que tome las citas actuales y agregue la nueva 
 
@@ -20,16 +33,30 @@ function App() {
     ])
   }
 
+  //Funcion para eliminar una cita por su id
+
+  const handleDelete = (id) => {
+    const nuevasCitas = citas.filter(cita => cita.id !== id)
+    if (citas.id !== id ) {
+      alert('¿ Esta seguro de borrar esta cita?')
+    }
+    setCitas(nuevasCitas);
+  }
+
+  //Mensaje condicional 
+  const titulo = citas.length === 0 ? "no hay citas" : 'Administras tus citas'
+
   return (
     <Fragment>
       <Title />
       <FormularioCitas
         crearCita={crearCita}
       />
-      <Title2 />
+            <h1 className="container text-center text-white font-weight-bold  fondo fs-0 mt-5"> {titulo} </h1>
       <div className="container d-flex flex-wrap justify-content-between">
         {citas.map((cita) => (
           <Cita
+            handleDelete={ handleDelete}
             key={cita.id}
             cita={cita}
           />

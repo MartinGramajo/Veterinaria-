@@ -59,7 +59,7 @@ export default function FormularioPacientes({ crearCita }) {
   return (
     <Form
       className="card mx-auto p-5"
-      style={{ width: "700px" }}
+      style={{ width: "600px" }}
       noValidate
       validated={validated}
       onSubmit={handleSubmit}

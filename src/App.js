@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Fragment, useState } from 'react';
 import Title from './components/Title';
 import FormularioCitas from './components/FormularioPacientes';
+import Title2 from './components/Title2';
+import Cita from './components/Cita';
 
 function App() {
 
@@ -24,6 +26,10 @@ function App() {
       <FormularioCitas
         crearCita={crearCita}
       />
+      <Title2 />
+      {citas.map((cita) => (
+        <Cita />
+      ))}
     </Fragment>
   );
 }

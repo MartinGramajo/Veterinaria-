@@ -16,7 +16,7 @@ function App() {
   // Funcion que tome las citas actuales y agregue la nueva 
 
   const crearCita = cita => {
-    setCitas([...citas,cita
+    setCitas([...citas, cita
     ])
   }
 
@@ -27,12 +27,14 @@ function App() {
         crearCita={crearCita}
       />
       <Title2 />
-      {citas.map((cita) => (
-        <Cita
-          key={cita.id}
-          cita={cita}
-        />
-      ))}
+      <div className="container d-flex flex-wrap justify-content-between">
+        {citas.map((cita) => (
+          <Cita
+            key={cita.id}
+            cita={cita}
+          />
+        ))}
+      </div>
     </Fragment>
   );
 }

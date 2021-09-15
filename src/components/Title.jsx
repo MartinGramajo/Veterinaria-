@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import "./title.css";
 
 export default function Title() {
     return (
-        <div className="text-center text-dark mt-5">
+        <div className=" container text-center text-dark fondo mt-5">
             <h1>
                 Veterinaria "Mi amigo Leon"
             </h1>

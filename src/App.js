@@ -28,7 +28,10 @@ function App() {
       />
       <Title2 />
       {citas.map((cita) => (
-        <Cita />
+        <Cita
+          key={cita.id}
+          cita={cita}
+        />
       ))}
     </Fragment>
   );

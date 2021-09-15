@@ -38,7 +38,7 @@ function App() {
   const handleDelete = (id) => {
     const nuevasCitas = citas.filter(cita => cita.id !== id)
     if (citas.id !== id ) {
-      alert('¿ Esta seguro de borrar esta cita?')
+      alert('¿seguro que desea borrar esta cita?')
     }
     setCitas(nuevasCitas);
   }

@@ -3,7 +3,7 @@ import "./title.css";
 
 export default function Title() {
     return (
-        <div className=" container text-center text-white fondo mt-5">
+        <div className=" container text-center text-white mt-5">
             <h1>
                 Veterinaria "Mi amigo Leon"
             </h1>

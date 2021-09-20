@@ -52,7 +52,7 @@ function App() {
       <FormularioCitas
         crearCita={crearCita}
       />
-            <h1 className="container text-center text-white font-weight-bold  fondo fs-0 mt-5"> {titulo} </h1>
+            <h1 className="container text-center text-white font-weight-bold  fs-0 mt-5"> {titulo} </h1>
       <div className="container d-flex flex-wrap justify-content-between">
         {citas.map((cita) => (
           <Cita

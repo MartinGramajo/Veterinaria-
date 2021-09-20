@@ -1,3 +1,6 @@
 body {
-    background-image: url(https://media.istockphoto.com/vectors/dog-bone-paw-seamless-pattern-vector-pet-footprint-french-bulldog-vector-id1138135871?k=20&m=1138135871&s=170667a&w=0&h=FfPXUiLjWglVuBIPjqCk4DG_4taxRPC7vbuPsi8oeP0=);
+    margin: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(-225deg, #a445b2, #d41872 52%, #f06);
+    padding: 0 0 5rem;
 }

@@ -1,3 +1,11 @@
 .fondo {
-    color: linear-gradient(150deg, #f731db, #4600f1 100%);
+    padding: 2rem;
+    background: #fff;
+    border-bottom: 1px solid #e1e1e1;
+    color: #000;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 15px;
 }

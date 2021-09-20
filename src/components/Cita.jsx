@@ -14,19 +14,19 @@ export default function Cita({ cita, handleDelete }) {
       }}
     >
       <p>
-        Mascota: {cita.mascota} <span></span>
+      <strong>Mascota:</strong> {cita.mascota} 
       </p>
       <p>
-        Dueño: {cita.propietario} <span></span>
+      <strong>Dueño:</strong> {cita.propietario} 
       </p>
       <p>
-        Fecha: {cita.fecha} <span></span>
+      <strong> Fecha:</strong> {cita.fecha} 
       </p>
       <p>
-        Hora: {cita.hora} <span></span>
+      <strong>Hora:</strong> {cita.hora} 
       </p>
       <p>
-        Sintomas: {cita.sintomas} <span></span>
+      <strong>Sintomas:</strong> {cita.sintomas}
       </p>
           <Button
               onClick={() => handleDelete

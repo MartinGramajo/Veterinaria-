@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Form, Row, Button, Col } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function FormularioPacientes({ crearCita }) {
   // state de validacion
@@ -141,8 +144,8 @@ export default function FormularioPacientes({ crearCita }) {
           </Form.Control.Feedback>
         </Form.Group>
       </Row>
-      <Button variant="success" type="submit">
-        Agregar citas
+      <Button className="text-white" variant="info" type="submit">
+        <FontAwesomeIcon icon={faUserPlus}  /> Agregar citas
       </Button>
     </Form>
   );

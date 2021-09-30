@@ -4,3 +4,10 @@ body {
     background-image: linear-gradient(-225deg, #a445b2, #d41872 52%, #f06);
     padding: 0 0 5rem;
 }
+
+/*Css Aplicado al formulario*/
+.tamaño-form{
+    max-width: 500px;
+    height: 500px;
+}
+

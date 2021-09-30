@@ -61,11 +61,11 @@ export default function FormularioPacientes({ crearCita }) {
 
   return (
     <Form
-      className="card mx-auto p-5"
-      style={{ width: "600px" }}
+      className="card mx-auto p-4 tamaño-form box"
       noValidate
       validated={validated}
       onSubmit={handleSubmit}
+      style={{borderRadius:"10px"}}
     >
       <Row className="mb-3">
         <Form.Group controlId="validationCustom01">

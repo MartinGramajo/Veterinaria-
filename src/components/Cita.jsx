@@ -7,7 +7,7 @@ import { faUserMinus } from "@fortawesome/free-solid-svg-icons";
 export default function Cita({ cita, handleDelete }) {
   return (
     <div
-      className="container d-flex flex-wrap justify-content-between card fondo "
+      className="container d-flex flex-wrap justify-content-between card fondo my-5 "
       style={{
         width: "400px",
         borderRadius: "10px",

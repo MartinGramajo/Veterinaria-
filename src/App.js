@@ -11,12 +11,12 @@ function App() {
   // Citas en local Storage
   let citasIniciales = JSON.parse(localStorage.getItem('citas'));
   if (!citasIniciales) {
-    citasIniciales = []; 
+    citasIniciales = [];
   }
 
   // Arreglo de citas 
   const [citas, setCitas] = useState(citasIniciales);
-  
+
   // use Effect para realizar ciertas operaciones cuando el esta cambia 
   useEffect(() => {
     if (citasIniciales) {
@@ -37,10 +37,9 @@ function App() {
 
   const handleDelete = (id) => {
     const nuevasCitas = citas.filter(cita => cita.id !== id)
-    if (citas.id !== id ) {
-      alert('¿seguro que desea borrar esta cita?')
+    if (citas.id !== id) {
+      setCitas(nuevasCitas);
     }
-    setCitas(nuevasCitas);
   }
 
   //Mensaje condicional 
@@ -52,11 +51,11 @@ function App() {
       <FormularioCitas
         crearCita={crearCita}
       />
-            <h1 className="container text-center text-white font-weight-bold  fs-0 mt-5"> {titulo} </h1>
+      <h1 className="container text-center text-white font-weight-bold  fs-0 mt-5"> {titulo} </h1>
       <div className="container d-flex flex-wrap justify-content-between">
         {citas.map((cita) => (
           <Cita
-            handleDelete={ handleDelete}
+            handleDelete={handleDelete}
             key={cita.id}
             cita={cita}
           />
